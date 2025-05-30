@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*venv/
+*env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Conda environments (если вдруг локально создадите)
+# Обычно conda env создается внутри Docker или в отдельном месте
+# /anaconda3/
+# /miniconda3/
+
+# Data - если данные очень большие. Для Titanic они маленькие, можно включить в Git.
+# Если бы данные были большие, раскомментируйте следующую строку:
+# data/
+
+# Output/Submissions
+submissions/

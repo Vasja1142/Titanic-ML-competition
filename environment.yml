@@ -1,0 +1,16 @@
+name: titanic-env # Имя нашего conda-окружения
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12    # Обновляем версию Python
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - openpyxl       # Для pandas, если работаем с Excel
+  # PyTorch, CUDA, cuDNN УЖЕ ВКЛЮЧЕНЫ В БАЗОВЫЙ ОБРАЗ NVIDIA
+  # Добавьте сюда другие специфичные для анализа данных библиотеки по мере необходимости
