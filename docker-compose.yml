@@ -1,7 +1,5 @@
-version: '3.8'
-
 services:
-  jupyter_lab_titanic_gpu: # Немного изменил имя сервиса для ясности
+  jupyter_lab_titanic_gpu:
     build: .
     container_name: titanic_kaggle_gpu_container
     ports:
@@ -9,14 +7,10 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    deploy: # Эта секция включает поддержку GPU
+    deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
-              count: all # Использовать все доступные GPU
-              # Или можно указа_imgть конкретное количество: count: 1
-              capabilities: [gpu] # Явно запрашиваем возможность gpu
-    # Примечание: Для старых версий Docker Compose (до 1.28.0) использовался runtime: nvidia
-    # stdin_open: true # Если нужен интерактивный доступ без Jupyter
-    # tty: true
+              count: all
+              capabilities: [gpu]
